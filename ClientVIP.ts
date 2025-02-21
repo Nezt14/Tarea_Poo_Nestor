@@ -1,9 +1,11 @@
 import { VIPStatus } from "./benefits";
+import { Clients } from "./benefits";
 
 
-
-export default class VIPClient implements VIPStatus{
-    constructor(public name:string){}
+export default class VIPClient extends Clients implements VIPStatus{
+    constructor(public name:string){
+        super(name)
+    }
 
     public VipBenefits(): string {
         return `Los beneficios por ser un cliente VIP son... `
@@ -18,4 +20,4 @@ export default class VIPClient implements VIPStatus{
 const VIP1 = new VIPClient(`Rogrigo`);
 const VIP2 = new VIPClient(`Manue`);
 
-export const ListaVip = [VIP1,VIP2]
+export let ListaVip = [VIP1,VIP2]

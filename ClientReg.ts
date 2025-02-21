@@ -1,5 +1,5 @@
 import { RegularStatus } from "./benefits";
-import { Clients } from "./main";
+import { Clients } from "./benefits";
 
 
 
@@ -20,4 +20,4 @@ export default class RegularClient extends Clients implements RegularStatus{
 const Reg1 = new RegularClient(`Carlos`)
 const Reg2 = new RegularClient(`fige`)
 
-export const REGlista = [Reg1,Reg2]
+export let REGlista = [Reg1,Reg2]
