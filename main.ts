@@ -4,6 +4,8 @@ import { ListaVip } from './ClientVIP';
 import { REGlista } from './ClientReg';
 import RegularClient from './ClientReg';
 import VIPClient from './ClientVIP';
+import { RegularStatus } from './benefits';
+import { VIPStatus } from './benefits';
 
 export class Clients {
     constructor(public name: string) { }
@@ -24,7 +26,7 @@ async function main() {
                 console.log(REGlista)
                 break;
             case 3:
-                console.log(`Lista regular: `+ REGlista + ` \n Lista VIP: `+ListaVip)
+                console.log(`Lista regular: `+ REGlista+ `y los beneficios: `+ RegularBenefits() + ` \n Lista VIP: `+ListaVip +``)
                 break;
             case 4:
                 const opcion2 = Number(await rl.question("Que opcion desea usar? \n Opcion 1 = Agregar un cliente Regular \n Opcion 2 = Agregar un cliente VIP \n Opcion 3 = eliminar el ultimo cliente creado \n Opcion 4 = Modificar un cliente: \n Opcion 5 = Volver \n opcion: "))
