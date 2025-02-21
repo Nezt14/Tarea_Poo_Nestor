@@ -17,7 +17,7 @@ export default class VIPClient extends Clients implements VIPStatus{
 
 }
 
-const VIP1 = new VIPClient(`Rogrigo`);
+export const VIP1 = new VIPClient(`Rogrigo`);
 const VIP2 = new VIPClient(`Manue`);
 
 export let ListaVip = [VIP1,VIP2]

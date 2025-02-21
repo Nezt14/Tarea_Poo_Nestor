@@ -9,7 +9,7 @@ export default class RegularClient extends Clients implements RegularStatus{
     }
 
     public RegularBenefits(): string {
-        return `${this.name}, Bienvenido, Los beneficios por ser un cliente regular son... `
+        return `Los beneficios por ser un cliente regular son... `
     }
 
     public RegularList():void{
@@ -17,7 +17,8 @@ export default class RegularClient extends Clients implements RegularStatus{
     }
 }
 
-const Reg1 = new RegularClient(`Carlos`)
-const Reg2 = new RegularClient(`fige`)
+export const Reg1 = new RegularClient(`Carlos`)
+export const Reg2 = new RegularClient(`fige`)
 
 export let REGlista = [Reg1,Reg2]
+
