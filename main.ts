@@ -17,7 +17,7 @@ async function main() {
     const rl = readline.createInterface({ input, output });
 
     try {
-        const opcion = Number(await rl.question("Que opcion desea usar? \n Opcion 1 = Lista de clientes VIP \n Opcion 2 = Lista de clientes Regulares \n Opcion 3 = ambas listas \n Opcion 4 = Modificar algo: \n Opcion 5 = Salir \n opcion: "))
+        const opcion = Number(await rl.question("Que opcion desea usar? \n Opcion 1 = Lista de clientes VIP \n Opcion 2 = Lista de clientes Regulares \n Opcion 3 = Beneficios de cada cliente \n Opcion 4 = Modificar algo: \n Opcion 5 = Salir \n opcion: "))
 
 
         switch (opcion) {
@@ -28,7 +28,7 @@ async function main() {
                 console.log(REGlista)
                 break;
             case 3:
-                console.log(`Lista regular: `+ REGlista[0]['name'] + ` y los beneficios: `+ Reg1.RegularBenefits()  + ` \n Lista VIP: `+ ListaVip +`y los beneficios: `+ VIP1.VipBenefits())
+                console.log(`Clientes regulares: `+ Reg1.RegularBenefits()  + ` \n Clientes VIP: `+ VIP1.VipBenefits())
                 break;
             case 4:
                 const opcion2 = Number(await rl.question("Que opcion desea usar? \n Opcion 1 = Agregar un cliente Regular \n Opcion 2 = Agregar un cliente VIP \n Opcion 3 = eliminar el ultimo cliente creado \n Opcion 4 = Modificar un cliente: \n Opcion 5 = Volver \n opcion: "))
@@ -108,7 +108,7 @@ async function main() {
                         break;
                         case 5:
                             //volver
-                            
+                            console.log(`Regresando al menu anterior...`)
                         
                         break;
 
@@ -126,7 +126,7 @@ async function main() {
 
                 break;
 
-        }setTimeout(inicioMenu, 2000)
+        }setTimeout(inicioMenu, 4000)
     } catch (error) {
         console.error(`Seleccione una opcion valida`);
     } finally {
